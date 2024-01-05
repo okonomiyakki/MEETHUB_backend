@@ -1,18 +1,18 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
 import { RoutesService } from './routes.service';
-import { RouteDto } from './dto/route.dto';
+import { CoordinateDto } from './dto/route.dto';
 
 @Controller('routes')
 export class RoutesController {
   constructor(private routesService: RoutesService) {}
 
   @Get()
-  getAllRoutes() {
-    return this.routesService.getAllRoutes();
+  getSample() {
+    return this.routesService.getSample();
   }
 
   @Post()
-  createRoute(@Body() routeDto: RouteDto) {
-    return this.routesService.createRoute(routeDto);
+  getTransPathByCenterCoord(@Body() coordinateDto: CoordinateDto) {
+    return this.routesService.getTransPathByCenterCoord(coordinateDto);
   }
 }
