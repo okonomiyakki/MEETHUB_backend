@@ -40,9 +40,10 @@ export class RoutesService {
           .toPromise();
 
         // console.log('response.data:', response.data);
-        console.log(`Radius: ${RADIUS}, Count: ${RESPONSE_COUNT}`);
 
         RESPONSE_COUNT = response.data.result.count;
+
+        console.log(`Radius: ${RADIUS}, Count: ${RESPONSE_COUNT}`);
 
         if (RESPONSE_COUNT > 0) {
           response.data.result.station.forEach((station) => {
@@ -85,7 +86,7 @@ export class RoutesService {
 
           if (response.data.error)
             console.log(
-              'error!!!!!!!',
+              'too many requests error!!!!!!!',
               response.data.error.code,
               response.data.error.message,
             );
@@ -98,7 +99,7 @@ export class RoutesService {
         startToEndPath = [];
       }
 
-      console.log('uniqueStation', uniqueStation);
+      // console.log('uniqueStation', uniqueStation);
 
       const endPointInfo = {
         stationLength: uniqueStation.length,
