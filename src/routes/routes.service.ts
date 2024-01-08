@@ -90,10 +90,6 @@ export class RoutesService {
               response.data.error.code,
               response.data.error.message,
             );
-
-          // trafficDistanceList.push(
-          //   response.data.result.path[0].info.trafficDistance,
-          // ); // totalTime 은 숫자가 너무 비슷함
         }
         stationPathList.push(startToEndPath);
         startToEndPath = [];
