@@ -33,7 +33,7 @@
 - ODsay API KEY를 발급받으시면, 로컬에서 사용 가능합니다.
 - [ODsay 홈페이지 바로가기](https://lab.odsay.com/)
 
-## [Server] 환경 변수 설정
+## [Server] 로컬 환경 변수 설정
 
 ```bash
 touch .env.dev
@@ -42,7 +42,7 @@ touch .env.dev
 ```
 /.env.dev
 
-HOST_URL={클라이언트 localhost 주소}
+HOST_URL={http://localhost:클라이언트포트}
 
 ODSAY_API_APP_KEY={ODsay API 키}
 
